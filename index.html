@@ -19,20 +19,27 @@
 
 <body>
 <div class="head">head</div>
-     <div class="header">
-                    <div class="menu">
-                        <nav>
-                            <ul>
-                            <li><a class=”current” href=”#”>Home</a></li>
-                            <li><a href=”#”>Web design</a></li>
-                            <li><a href=”#”>Banner</a></li>
-                            <li><a href=”#”>Ilusutration</a></li>
-                            <li><a href=”#”>About me</a></li>
-                            </ul>
-                        </nav>
+<div id="navArea">
 
-                    </div>
-                </div>
+      <nav>
+        <div class="inner">
+          <ul>
+            <li><a href="https://miharu828.github.io/portfolio">Home</a></li>
+            <li><a href="https://miharu828.github.io/aboutme">About me</a></li>
+            <li><a href="https://miharu828.github.io/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+     
+      
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      
+        <div id="mask"></div>
+      
 
  <div class="title">化粧品サイト</div>
 <div class="main">
@@ -90,5 +97,26 @@
     Sakashita Miharu
 </div>
 
+  
+  <script>
+  (function($) {
+var $nav   = $('#navArea');
+var $btn   = $('.toggle_btn');
+var $mask  = $('#mask');
+var open   = 'open'; // class
+// menu open close
+$btn.on( 'click', function() {
+if ( ! $nav.hasClass( open ) ) {
+$nav.addClass( open );
+} else {
+$nav.removeClass( open );
+}
+});
+// mask close
+$mask.on('click', function() {
+$nav.removeClass( open );
+});
+} )(jQuery);
+</script>
 </body>
 
