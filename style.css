@@ -409,14 +409,3 @@ nav {
     cursor: pointer;
     transition: all .5s;
   }
-  /*============
-  main
-  =============*/
-  main {
-    padding: 50px;
-  }
-  main h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    text-align: center;
-  }
